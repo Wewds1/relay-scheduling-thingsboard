@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ThingsBoard Scheduler</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Relay Scheduler</h1>
+                <div id="notification" class="notification"></div>
+
+        <label for="onDate">Select Date:</label>
+        <input type="date" id="onDate" name="onDate">
+
+        <label for="onTime">Select Time:</label>
+        <select id="onTime" name="onTime">
+            <option value="05:00">05:00 AM</option>
+            <option value="06:00">06:00 AM</option>
+            <option value="07:00">07:00 AM</option>
+            <option value="08:00">08:00 AM</option>
+            <option value="09:00">09:00 AM</option>
+            <option value="10:00">10:00 AM</option>
+            <option value="11:00">11:00 AM</option>
+            <option value="12:00">12:00 PM</option>
+            <option value="13:00">01:00 PM</option>
+            <option value="14:00">02:00 PM</option>
+            <option value="15:00">03:00 PM</option>
+            <option value="16:00">04:00 PM</option>
+            <option value="17:00">05:30 PM</option>
+            <option value="18:00">06:00 PM</option>
+            <option value="19:00">07:00 PM</option>
+            <option value="20:00">08:00 PM</option>
+            <option value="21:00">09:00 PM</option>
+            <option value="22:00">10:00 PM</option>
+        </select>
+
+        <label for="recurring">Recurring:</label>
+        <select id="recurring" name="recurring">
+            <option value="none">None</option>
+            <option value="daily">Daily</option>
+            <option value="weekly">Weekly</option>
+        </select>
+
+        <button id="sendScheduleBtn" onclick="sendSchedule()">Send Schedule</button>
+
+        <div class="history">
+            <h3>Scheduled History:</h3>
+            <ul id="scheduleHistoryList">
+            </ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.0/socket.io.js"></script>
+</body>
+</html>
