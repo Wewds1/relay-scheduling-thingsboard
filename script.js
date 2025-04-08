@@ -4,7 +4,7 @@ const deviceToken = 'XX3mCw961W0g4ZvTk6fh';
 
 // Function to show notification
 function showNotification(message) {
-    const notification = document.getElementById('notification');
+
     notification.textContent = message;
     notification.style.display = 'block';
     setTimeout(() => {
